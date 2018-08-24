@@ -24,6 +24,14 @@ Docker
 Dropbox
 iTerm2
 
+## NPM Global
+
+http-server
+ngrok
+npm
+serverless
+yarn
+
 ## Z Shell & iTerm2
 
 Setup resource: https://gist.github.com/kevin-smets/8568070
