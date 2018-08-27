@@ -2,7 +2,7 @@
 
 ## Direct Downloads
 
- [ ] BetterSnapTool
+ [ ] [Anki](https://apps.ankiweb.net/)
  [ ] BetterTouchTool
  [ ] Duet
  [ ] [Giphy Capture](https://giphy.com/apps/giphycapture)
@@ -13,16 +13,22 @@
 
 ## Mac App Store
 
+ [ ] BetterSnapTool
  [ ] Effortless
+ [ ] LastPass
  [ ] OneDrive
+ [ ] Pixelmator
+ [ ] Scrivener
  [ ] Unsplash Wallpapers
+ [ ] Xcode
 
 ## brew cask install
 
-Dash
-Docker
-Dropbox
-iTerm2
+dash
+docker
+dropbox
+google-chrome
+iterm2
 
 ## NPM Global
 
