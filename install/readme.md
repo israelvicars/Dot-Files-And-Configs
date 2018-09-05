@@ -3,23 +3,37 @@
 ## Direct Downloads
 
  [ ] [Anki](https://apps.ankiweb.net/)
+ 
  [ ] BetterTouchTool
+ 
  [ ] Duet
+ 
  [ ] [Giphy Capture](https://giphy.com/apps/giphycapture)
+ 
  [ ] [Freedom](https://freedom.to/downloads)
+ 
  [ ] PixelSnap (Gumroad)
+ 
  [ ] [Recordit](http://recordit.co/)
+ 
  [ ] [Slack](https://slack.com/downloads/osx)
 
 ## Mac App Store
 
  [ ] BetterSnapTool
+ 
  [ ] Effortless
+ 
  [ ] LastPass
+ 
  [ ] OneDrive
+ 
  [ ] Pixelmator
+ 
  [ ] Scrivener
+ 
  [ ] Unsplash Wallpapers
+ 
  [ ] Xcode
 
 ## brew cask install
