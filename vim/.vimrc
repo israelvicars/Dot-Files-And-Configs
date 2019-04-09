@@ -2,8 +2,6 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'AndrewRadev/ember_tools.vim'
-Plug 'yalesov/vim-emblem'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'sheerun/vim-polyglot'
@@ -15,8 +13,9 @@ Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'godlygeek/tabular'
-Plug 'sukima/vim-ember-imports'
 Plug 'junegunn/vim-easy-align', { 'on': '<Plug>(EasyAlign)' }
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'scss', 'json', 'html'] }
+Plug 'neoclide/coc.nvim', { 'do': 'yarn install --frozen-lockfile' }
 
 call plug#end()
 
@@ -27,13 +26,16 @@ let NERDTreeShowHidden=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-n> :NERDTreeToggle<CR>
 
+let NERDTreeShowLineNumbers=1
+"autocmd FileType nerdtree setlocal relativenumber
+
 "ACK
 
 let g:ack_default_options=" -s -H --nopager --nocolor --nogroup --column --ignore-dir=tmp --ignore-dir=dist --ignore-dir=node_modules --ignore-dir=.esm-cache"
 
 "CTRL-P
 
-set runtimepath^=~/.vim/plugged/ctrlp.vim
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 set wildignore+=*/tmp/*,*/node_modules/*,*/dist/*,*/WebApi/*
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_map = '<c-p>'
@@ -46,6 +48,19 @@ let g:ctrlp_mruf_case_sensitive = 0
 let g:airline_theme='solarized'
 let g:airline_solorized_bg='dark'
 let g:airline_powerline_fonts=1
+
+"PRETTIER
+
+let g:prettier#config#config_precedence = 'prefer-file'
+let g:prettier#config#parser = 'flow'
+let g:prettier#config#semi = 'false'
+let g:prettier#autoformat = 0
+let g:prettier#quickfix_enabled = 0
+autocmd BufWritePre *.js,*.jsx,,*.ts,*.tsx,*.scss,*.html Prettier
+
+"coc.nvim
+
+set hidden
 
 "ALL FILES
 
@@ -89,10 +104,7 @@ set backupdir=~/.vim/backups//
 
 "FILE TYPES
 
-au FileType coffee set sw=2 sts=2 ts=2 et
 au FileType javascript set sw=2 sts=2 ts=2 et
-au FileType stylus set sw=2 sts=2 ts=2 et
-au FileType emblem set sw=2 sts=2 ts=2 et
 
 "COMMANDS
 

@@ -1,3 +1,0 @@
-# rAndOM Hash README
-
-Yup
